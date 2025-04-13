@@ -6,9 +6,9 @@
 // Приклади використання:
 
 
-console.log(findFirstOccurrence('Hello, world!', 'world')) // 7
-console.log(findFirstOccurrence('Hello, world!', 'JavaScript')) // -1
-console.log(findFirstOccurrence('Hello, world!', 'Hello')) // 0
+// console.log(findFirstOccurrence('Hello, world!', 'world')) // 7
+// console.log(findFirstOccurrence('Hello, world!', 'JavaScript')) // -1
+// console.log(findFirstOccurrence('Hello, world!', 'Hello')) // 0
 
 
 // 2
@@ -21,9 +21,9 @@ console.log(findFirstOccurrence('Hello, world!', 'Hello')) // 0
 
 
 
-console.log(getSubstring('Hello, world!', 7, 12)) // "world"
-console.log(getSubstring('JavaScript', 4, 10)) // "Script"
-console.log(getSubstring('Slice method', 0, 5)) // "Slice"
+// console.log(getSubstring('Hello, world!', 7, 12)) // "world"
+// console.log(getSubstring('JavaScript', 4, 10)) // "Script"
+// console.log(getSubstring('Slice method', 0, 5)) // "Slice"
 
 // 3
 // Написати функцію extractAfterSubstring,
@@ -40,19 +40,19 @@ console.log(getSubstring('Slice method', 0, 5)) // "Slice"
 //     }
 // }
 
-function extractAfterSubstring(str, substr) {
-    idx = str.indexOf(substr);
-    if (idx !== -1) {
-        return str.slice(idx, idx + substr.length);
-    } else {
-        return "";
-    }
-}
+// function extractAfterSubstring(str, substr) {
+//     idx = str.indexOf(substr);
+//     if (idx !== -1) {
+//         return str.slice(idx, idx + substr.length);
+//     } else {
+//         return "";
+//     }
+// }
 // Приклади використання:
-console.log(extractAfterSubstring('Hello, world!', 'world')) // "!"
-console.log(extractAfterSubstring('Hello, world!', 'JavaScript')) // ""
-console.log(extractAfterSubstring('Hello, world!', 'Hello')) // ", world!"
-console.log(extractAfterSubstring("I love you!", "love"));
+// console.log(extractAfterSubstring('Hello, world!', 'world')) // "!"
+// console.log(extractAfterSubstring('Hello, world!', 'JavaScript')) // ""
+// console.log(extractAfterSubstring('Hello, world!', 'Hello')) // ", world!"
+// console.log(extractAfterSubstring("I love you!", "love"));
 
 
 
@@ -64,9 +64,9 @@ console.log(extractAfterSubstring("I love you!", "love"));
 //     функція повинна повертати оригінальний рядок.
 
 // Приклади використання:
-console.log(removeSubstring('Hello, world!', 'world')) // "Hello, !"
-console.log(removeSubstring('Hello, world!', 'JavaScript')) // "Hello, world!"
-console.log(removeSubstring('Hello, world!', 'Hello')) // ", world!"
+// console.log(removeSubstring('Hello, world!', 'world')) // "Hello, !"
+// console.log(removeSubstring('Hello, world!', 'JavaScript')) // "Hello, world!"
+// console.log(removeSubstring('Hello, world!', 'Hello')) // ", world!"
 
 
 
@@ -78,9 +78,9 @@ console.log(removeSubstring('Hello, world!', 'Hello')) // ", world!"
 //   функція повинна повертати порожній рядок.
 
 // Приклади використання:
-console.log(extractBetween('Hello, [world]!', '[', ']')) // "world"
-console.log(extractBetween('Hello, [world]!', '{', '}')) // ""
-console.log(extractBetween('Hello, {world}!', '{', '}')) // "world"
+// console.log(extractBetween('Hello, [world]!', '[', ']')) // "world"
+// console.log(extractBetween('Hello, [world]!', '{', '}')) // ""
+// console.log(extractBetween('Hello, {world}!', '{', '}')) // "world"
 
 
 
@@ -89,26 +89,25 @@ console.log(extractBetween('Hello, {world}!', '{', '}')) // "world"
 //   яка приймає рядок str і повертає новий рядок,
 //     у якому з кожного слова видалені всі голосні букви.
 
-const vowels = "aoieyuAOIEYU";
+// const vowels = "aoieyuAOIEYU";
 
-function removeVowelFromWords(str) {
-    let newStr = "";
+// function removeVowelFromWords(str) {
+//     let newStr = "";
 
-    for (let i = 0; i < str.length; i++){
-     if (vowels.includes(str[i])) {
-        continue;
-    } else {
-        newStr += str[i];
-    }   
-    }
-        return newStr;
-}
-
-console.log(removeVowelFromWords("qwertyuiop[]][poiuytrewqwertyuiop["))
-// Приклади використання:
-console.log(removeVowelsFromWords('Hello, world!')) // "Hll, wrld!"
-console.log(removeVowelsFromWords('JavaScript is awesome!')) // "JvScrpt s wsm!"
-console.log(removeVowelsFromWords('Remove vowels from words')) // "Rmv vwls frm wrds"
+//     for (let i = 0; i < str.length; i++){
+//      if (vowels.includes(str[i])) {
+//         continue;
+//     } else {
+//         newStr += str[i];
+//     }   
+//     }
+//         return newStr;
+// }
+// // Приклади використання:
+// console.log(removeVowelFromWords("qwertyuiop[]][poiuytrewqwertyuiop["))
+// console.log(removeVowelsFromWords('Hello, world!')) // "Hll, wrld!"
+// console.log(removeVowelsFromWords('JavaScript is awesome!')) // "JvScrpt s wsm!"
+// console.log(removeVowelsFromWords('Remove vowels from words')) // "Rmv vwls frm wrds"
 
 
 
@@ -121,17 +120,17 @@ console.log(removeVowelsFromWords('Remove vowels from words')) // "Rmv vwls frm 
 // Цикл повинен запитувати число, поки користувач не введе число більше 100,
 //   або не натисне кнопку "Відміна"
 
-function inputNumber() {
-    let num;
-    do {
-        num = prompt("Введіть число більше 100");
-        if (num === null) return "Відміна"; // натиснув "Скасувати"
-    } while (Number(num) <= 100 || isNaN(num));
-    return num;
-}
+// function inputNumber() {
+//     let num;
+//     do {
+//         num = prompt("Введіть число більше 100");
+//         if (num === null) return "Відміна"; // натиснув "Скасувати"
+//     } while (Number(num) <= 100 || isNaN(num));
+//     return num;
+// }
 
-let results = inputNumber();
-console.log(results);
+// let results = inputNumber();
+// console.log(results);
 
 
 // 8
@@ -140,9 +139,9 @@ console.log(results);
 //   у якому всі входження символу char видалені. Використовуйте цикл while
 
 // Приклади використання:
-console.log(removeCharacter('Hello, world!', 'o')) // "Hell, wrld!"
-console.log(removeCharacter('JavaScript', 'a')) // "JvScript"
-console.log(removeCharacter('12345', '3')) // "1245"
+// console.log(removeCharacter('Hello, world!', 'o')) // "Hell, wrld!"
+// console.log(removeCharacter('JavaScript', 'a')) // "JvScript"
+// console.log(removeCharacter('12345', '3')) // "1245"
 
 
 
@@ -151,8 +150,8 @@ console.log(removeCharacter('12345', '3')) // "1245"
 // яка перевіряє, що першим символом цього рядка є літера 'a'.
 //  Якщо це так - вивести "так", у іншому випадку вивести "ні"
 
-const string = 'abcde' // тестовий рядок 1
-const stringSecond = 'bcde' // тестовий рядок 2
+// const string = 'abcde' // тестовий рядок 1
+// const stringSecond = 'bcde' // тестовий рядок 2
 
 
 // 10
@@ -160,20 +159,20 @@ const stringSecond = 'bcde' // тестовий рядок 2
 // рядок str і символ char.Функція повинна повертати кількість входжень
 // символу char у рядку str.
 
-function countOccurrences(str, char) {
-    let count = 0;
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === char) {
-            count++;
-        }
-    }
-    return count;
-}
+// function countOccurrences(str, char) {
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === char) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
 
-// Приклади використання:
-console.log(countOccurrences('Hello, world!', 'o')) // 2
-console.log(countOccurrences('JavaScript', 'a')) // 2
-console.log(countOccurrences('12345', '3')) // 1
+// // Приклади використання:
+// console.log(countOccurrences('Hello, world!', 'o')) // 2
+// console.log(countOccurrences('JavaScript', 'a')) // 2
+// console.log(countOccurrences('12345', '3')) // 1
 
 
 // 11
@@ -183,9 +182,9 @@ console.log(countOccurrences('12345', '3')) // 1
 // функція повинна повертати null.
 
 // Приклади використання:
-console.log(extractNumber('abc123def')) // 123
-console.log(extractNumber('no numbers here')) // null
-console.log(extractNumber('42 is the answer')) // 42
+// console.log(extractNumber('abc123def')) // 123
+// console.log(extractNumber('no numbers here')) // null
+// console.log(extractNumber('42 is the answer')) // 42
 
 
 // 12
@@ -194,9 +193,9 @@ console.log(extractNumber('42 is the answer')) // 42
 // Якщо таких слів кілька, повернути перше знайдене.
 
 // Приклади використання:
-console.log(findLongestWord('The quick brown fox jumps over the lazy dog')) // "jumps"
-console.log(findLongestWord('JavaScript is awesome')) // "JavaScript"
-console.log(findLongestWord('I love coding')) // "coding"
+// console.log(findLongestWord('The quick brown fox jumps over the lazy dog')) // "jumps"
+// console.log(findLongestWord('JavaScript is awesome')) // "JavaScript"
+// console.log(findLongestWord('I love coding')) // "coding"
 
 
 // 13
@@ -205,9 +204,9 @@ console.log(findLongestWord('I love coding')) // "coding"
 // у якому кожен другий символ є великим.
 
 // Приклади використання:
-console.log(capitalizeEverySecondChar('hello world')) // "hElLo wOrLd"
-console.log(capitalizeEverySecondChar('javascript')) // "jAvAsCrIpT"
-console.log(capitalizeEverySecondChar('1234567890')) // "1234567890"
+// console.log(capitalizeEverySecondChar('hello world')) // "hElLo wOrLd"
+// console.log(capitalizeEverySecondChar('javascript')) // "jAvAsCrIpT"
+// console.log(capitalizeEverySecondChar('1234567890')) // "1234567890"
 
 
 // 14
@@ -215,10 +214,10 @@ console.log(capitalizeEverySecondChar('1234567890')) // "1234567890"
 //     яка приймає рядок str і повертає true,
 //     якщо всі символи в рядку унікальні, і false в іншому випадку.
 
-// Приклади використання:
-console.log(hasUniqueChars('abcdef')) // true
-console.log(hasUniqueChars('hello')) // false
-console.log(hasUniqueChars('1234567890')) // true
+// // Приклади використання:
+// console.log(hasUniqueChars('abcdef')) // true
+// console.log(hasUniqueChars('hello')) // false
+// console.log(hasUniqueChars('1234567890')) // true
 
 
 
