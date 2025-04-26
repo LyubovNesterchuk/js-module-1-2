@@ -9,7 +9,7 @@
 // for (let i = 0; i < 9; i++) {
 //   console.log(i);
   // more statements
-}
+// }
 
 // console.log("Alice" < "alice");
 // // true
@@ -24,6 +24,9 @@
 // console.log("a", a);
 // // a 11
 
+
+// ----------------------------------------------------------------------------------
+
 // function calcBMI(height, weight) {
 //     let numWeight = weight.replace(",", ".");
 //     numWeight = Number.parseFloat(numWeight);
@@ -36,10 +39,13 @@
 // const bmi = calcBMI("176,9", "1,8");
 // console.log(bmi);
 
+// ----------------------------------------------------------------------------
+
 // const user = "Alice";
 // for (let i = 0; i < user.length; i++){
 //     console.log(user[i], i)
 // }
+
 
 // const uSer = "Philipe";
 // for (let i = 0; i < user.length; i++){
@@ -49,6 +55,7 @@
 //     console.log(uSer[i], i)
 // }
 
+
 // console.log("before")
 // let counter = 8;
 // while (counter < 5) {
@@ -57,11 +64,13 @@
 //   }
 // console.log("after")
 
+
 // do {
 //     console.log(counter);
 //     counter++;
 // } while (counter < 5)
-    
+ 
+
 // const n = 5;
 // const m = 40;
 // for (let i = n; i <= m; i--){
@@ -69,6 +78,8 @@
 //         console.log(i)
 //     }
 // }
+
+// -------------------------------------------------------------
 
 // const deadline = 0;
 // if (deadline === 0) {
@@ -81,6 +92,7 @@
 //     console.log("Date in the future");
 // }
 
+// ---------------------------------------------------------------
 
 // let message = "";
 // switch(deadline) {
@@ -99,6 +111,8 @@
 // console.log(message);
 
 
+// ----------------------------------------------------------------------------------------
+
 // const option = 1;
 // let message;
 // switch(option) {
@@ -116,6 +130,10 @@
 // }
 // console.log(message);
 
+
+
+// ------------------------------------------------------------------------------------------
+
 // const sub = "free";
 // let canConnect;
 // if (sub === "pro" || sub === "vip") {
@@ -125,9 +143,14 @@
 // }
 // console.log(canConnect);
 
+
 // const sub = "pro";
 // let canConnect = sub === "pro" || sub === "vip" ? true : false;
 // console.log("canConnect", canConnect);
+
+
+
+// ---------------------------------------------------------------------------------
 
 // const isOnline = true;
 // const isFriend = true;
@@ -145,6 +168,10 @@
 // const mute = isDnd ? "on" : "of";
 // console.log(mute);
 
+
+
+// ---------------------------------------------------------------------------------------
+
 // let link = "https: my-site.com/about"
 // if (!link.endsWith("/")) {
 //     link += "/";
@@ -157,8 +184,13 @@
 // link = !link.endsWith("/") && link.includes("my-site") ? link += "/" : link;
 // console.log(link);
 
+
+
+
+// ------------------------------------------------------------------------------------------
+
 const min = 4;
-const max = 13;
+const max = 9;
 let total = 0;
 
 // for (let i = min; i < max; i++){
@@ -166,7 +198,7 @@ let total = 0;
 //         total += 1;
 //     }
 // }
-// console.log(total);
+// console.log(total); // 5
 
 // for (let i = min; i < max; i++){
 //     if (i % 2 !== 0) {
@@ -176,13 +208,26 @@ let total = 0;
 //     }
 //     console.log(i);
 // }
+﻿
+// classwork.js:209 4
+// classwork.js:205 if 5
+// classwork.js:209 6
+// classwork.js:205 if 7
+// classwork.js:209 8
+// classwork.js:205 if 9
+// classwork.js:209 10
+// classwork.js:205 if 11
+// classwork.js:209 12
+
 
 // for (let i = min; i < max; i++){
 //     if (i % 2 !== 0) {
 //         continue;
 //     }
 //      console.log(i);
-// }
+// }  // 4 6 8 10 12
+
+
 
 // for (let i = min; i < max; i++){
 //     if (i % 2 !== 0) {
@@ -190,10 +235,41 @@ let total = 0;
 //     }
 //      total += i;
 // }
-// console.log(total);
+// console.log(total); // 40
+
+// --------------------------------------------------------------------------------
+
+
+// const inputs = ['123', '', '456', null, '789'];
+
+// for (let input of inputs) {
+//   if (!input) { // Якщо пустий рядок або null
+//     continue;
+//   }
+//   console.log(`Обробляємо: ${input}`);
+// }
+
+// ------------------------------------------------------------------------------------
 
 // const user = "Alice";
 // for (let i = 0; i <= user.length - 1; i++){
 //     console.log(user[i], `user[${i}]`)
 // }
-    
+   
+
+
+
+// ----------------------------------------------------------------------------------
+
+// const hours = 14;
+// const minutes = 20;
+// let time;
+// if (minutes > 0) {
+//   time = `${hours} год. ${minutes} хв.`;
+// } else {
+//   time= `${hours} год.`;
+// };
+ 
+// const time = minutes > 0 ? `${hours} год. ${minutes} хв.` : `${hours} год.`;
+
+// console.log(time);
