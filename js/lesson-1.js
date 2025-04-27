@@ -292,23 +292,23 @@ console.log(findLongestWord('I love coding')) // "coding"
 // яка приймає рядок str і повертає новий рядок,
 // у якому кожен другий символ є великим.
 
-function capitalizeEverySecondChar(str) {
-  let chars = [];
+// function capitalizeEverySecondChar(str) {
+//   let chars = [];
 
-  for (let i = 0; i < str.length; i++) {
-    if (i % 2 !== 0) {
-      chars.push(str[i].toUpperCase());
-    } else {
-      chars.push(str[i].toLowerCase());
-    }
-  }
+//   for (let i = 0; i < str.length; i++) {
+//     if (i % 2 !== 0) {
+//       chars.push(str[i].toUpperCase());
+//     } else {
+//       chars.push(str[i].toLowerCase());
+//     }
+//   }
 
-  return chars.join('');
-}
+//   return chars.join('');
+// }
 
-console.log(capitalizeEverySecondChar('hello world')) // "hElLo wOrLd"
-console.log(capitalizeEverySecondChar('javascript')) // "jAvAsCrIpT"
-console.log(capitalizeEverySecondChar('1234567890')) // "1234567890"
+// console.log(capitalizeEverySecondChar('hello world')) // "hElLo wOrLd"
+// console.log(capitalizeEverySecondChar('javascript')) // "jAvAsCrIpT"
+// console.log(capitalizeEverySecondChar('1234567890')) // "1234567890"
 
 
 // 14
@@ -329,60 +329,4 @@ console.log(capitalizeEverySecondChar('1234567890')) // "1234567890"
 // console.log(hasUniqueChars('hello')) // false
 // console.log(hasUniqueChars('1234567890')) // true
 
-// function fillArray(min, max) {
-//     let arr = [];
-//     for (let i = min; i <= max; i += 2) {
-//       return arr.push(i)
-//     }
-// }
-// console.log(fillArray(2, 10));
-// поверне 1, тобто довжину масиву, бо відразу вийде з циклу через return всередині циклу
 
-// function fillArray(min, max) {
-//     let arr = [];
-//     for (let i = min; i <= max; i += 2) {
-//         arr.push(i);
-//     }
-//     return arr;
-// }
-
-// console.log(fillArray(2, 10)); // [2, 4, 6, 8, 10]
-
-
-// const password = 'true';
-// const myKey = password;
-// const obj = {
-//   [myKey]: false,
-// };
-// console.log(obj);
-
-
-// const fruits = ['banana', 'apple', 'orange', 'watermelon',
-// 'apple', 'orange', 'grape', 'apple'];
-// fruits.length = 0;
-// console.log(fruits); // поверне []
-
-
-
-// const fruits = ['apple', 'banana', 'orange'];
-// const meat = ['poultry', 'beef', 'fish'];
-// const vegetables = ['potato', 'tomato', 'cucumber'];
-// const food = [...fruits, ...meat, ...vegetables];
-// console.log(food); // поверне ["apple", "banana", "orange",
-// "poultry", "beef", "fish", "potato", "tomato", "cucumber"]
-
-
-// const user = {
-//   name: "John",
-//   age: 20,
-//   hobby: "tenis",
-// };
-// const userKeys = Object.keys(user);
-// for (const key of userKeys) {
-//    isAdult(age)user[key]);
-//  }
-
- function isAdult(age) {
-  return age >= 18;
-}
-console.log(isAdult(40));
